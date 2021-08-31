@@ -825,7 +825,7 @@ class _VehicleRentalAllListScreenState extends State<VehicleRentalAllListScreen>
         .of(context)
         .size
         .width;
-    return new Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -902,7 +902,7 @@ class _VehicleRentalAllListScreenState extends State<VehicleRentalAllListScreen>
                             height: 40,
                           ),
                           ExpansionTile(
-                            title: Text("Range"),
+                            title: Text("Price per hour"),
                             children: [
                               ListView.builder(
                                 shrinkWrap: true,
@@ -957,14 +957,12 @@ class _VehicleRentalAllListScreenState extends State<VehicleRentalAllListScreen>
                               setState(() {
                                 isFiltersApplied = true;
                               });
-
                               vehicleRentalListFiltered.clear();
                               vehicleRentalAllList.forEach((element) {
                                 /// range
                                 if (element.vehiclePerCharge != null) {
-                                  String apirange = element.vehiclePerCharge!.replaceAll(" km", "").replaceAll(",", "");
-                                  double data = double.parse(apirange);
-                                  print("Distance>>>>>>>"+apirange);
+                                  String priceRate = element.vehiclePerCharge!.replaceAll(" Rs", "").replaceAll(",", "");
+                                  double data = double.parse(priceRate);
                                   double dataSelected =
                                   double.parse(selectedRangeValues);
                                   int range1 = data.round();
