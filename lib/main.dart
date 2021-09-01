@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vehicle_rental/school/screens/school_all_lists_screen.dart';
 import 'package:vehicle_rental/tour_and_travel/screens/tour_travel_all_list_screen.dart';
 import 'package:vehicle_rental/vehicle_rental/screens/vehicle_rental_all_list_screens.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: TourAndTravelAllListScreen(),
+      home: SchoolAllListsScreen(),
     );
   }
 }
