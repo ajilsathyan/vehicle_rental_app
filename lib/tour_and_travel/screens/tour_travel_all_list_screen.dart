@@ -405,8 +405,8 @@ class _TourAndTravelAllListScreenState extends State<TourAndTravelAllListScreen>
                               tourTravelAllList.forEach((element) {
                                 /// range
                                 if (element.distance != null) {
-                                  String priceRate = element.distance!.replaceAll(" Km", "").replaceAll(",", "");
-                                  double data = double.parse(priceRate);
+                                  String kilometer = element.distance!.replaceAll(" Km", "").replaceAll(",", "");
+                                  double data = double.parse(kilometer);
                                   double dataSelected =
                                   double.parse(selectedRangeValues);
                                   int range1 = data.round();
